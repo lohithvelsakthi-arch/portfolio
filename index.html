@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="gold">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lohith Vel — Full-Stack Architect & Creative Technologist</title>
+    <meta name="description" content="Personal portfolio of Lohith Vel, Software Engineer & Creative Technologist based in Tamilnadu, India. Showcasing resilient distributed systems, modern web applications, and high-performance digital experiences.">
+    <meta name="keywords" content="Lohith Vel, Full Stack Engineer, Software Architect, Cloud, AI, Portfolio, Tamilnadu, India">
+    <meta name="author" content="Lohith Vel">
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lohith Vel — Full-Stack Architect & Creative Technologist">
+    <meta property="og:description" content="Obsidian luxury, micro-physics animations, and high-performance web architecture.">
+    <meta property="og:image" content="assets/images/hero-portrait.jpg">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%230A0B0F'/><text x='50%' y='55%' font-family='sans-serif' font-weight='900' font-size='48' fill='%23E5B869' text-anchor='middle' dominant-baseline='middle'>LV</text></svg>">
+</head>
+<body>
+
+    <!-- Particle Starfield Canvas & Ambient Luminescence -->
+    <canvas id="particle-canvas"></canvas>
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+
+    <!-- Interactive Custom Cursor Follower -->
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
+    </div>
+
+    <!-- Glassmorphic Floating Header -->
+    <header class="header" id="header">
+        <div class="nav-wrapper">
+            <nav class="nav-pill">
+                <a href="#hero" class="logo-brand" aria-label="Lohith Vel Home">
+                    <div class="logo-badge" id="nav-monogram">LV</div>
+                    <span class="logo-name" id="nav-name">Lohith Vel</span>
+                </a>
+
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#expertise" class="nav-link">Expertise</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#journey" class="nav-link">Journey</a></li>
+                    <li><a href="#terminal" class="nav-link">Terminal</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <!-- Theme Switcher -->
+                    <div class="theme-switcher" title="Select Obsidian Accent">
+                        <button class="theme-btn active" data-set-theme="gold" title="Champagne Gold"></button>
+                        <button class="theme-btn" data-set-theme="chrome" title="Liquid Chrome"></button>
+                        <button class="theme-btn" data-set-theme="emerald" title="Cyber Emerald"></button>
+                        <button class="theme-btn" data-set-theme="sapphire" title="Royal Sapphire"></button>
+                    </div>
+
+                    <!-- Ambient Sound FX Toggle -->
+                    <button class="audio-toggle-btn" id="audio-toggle" title="Toggle Interactive Sound FX" aria-label="Toggle Sound">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path class="audio-wave" d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                            <path class="audio-wave" d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                        </svg>
+                    </button>
+
+                    <!-- CV Quick View -->
+                    <button class="btn-secondary" id="btn-open-resume" style="padding: 8px 16px; font-size: 0.8rem;">
+                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <span>Resume</span>
+                    </button>
+
+                    <!-- Contact Action -->
+                    <a href="#contact" class="btn-primary" style="padding: 8px 18px; font-size: 0.82rem;">Let's Talk</a>
+
+                    <!-- Mobile Toggle -->
+                    <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content reveal-init">
+                        <div class="hero-status-pill">
+                            <div class="status-dot"></div>
+                            <span class="status-text" id="hero-status">Available for High-Impact Roles & Consulting</span>
+                        </div>
+
+                        <h1 class="hero-title">
+                            Engineering <span class="gradient-text">Timeless Luxury</span> &amp; Raw Performance
+                            <span class="role-typing-wrapper">
+                                <span id="typed-role">Full-Stack Architect</span>
+                                <span class="typing-cursor"></span>
+                            </span>
+                        </h1>
+
+                        <p class="hero-summary" id="hero-bio">
+                            I am a Software Architect crafting ultra-fast, visually captivating, and resilient web ecosystems. Bridging high-concurrency microservices, applied AI pipelines, and bespoke 60fps obsidian glass interfaces.
+                        </p>
+
+                        <div class="hero-cta-group">
+                            <a href="#projects" class="btn-primary">
+                                <span>Explore Featured Work</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </a>
+                            <a href="#contact" class="btn-secondary">
+                                <span>Get in Touch</span>
+                            </a>
+                            <div class="hero-social-pills">
+                                <a href="https://github.com/lohithvelsakthi-arch" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="GitHub">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                    <span>GitHub</span>
+                                </a>
+                                <a href="https://www.linkedin.com/in/lohith-vel-a97024380/" target="_blank" rel="noopener noreferrer" class="hero-social-link" title="LinkedIn">
+                                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="hero-stats-row" id="stats-container">
+                            <!-- Dynamic stats populated from data.js -->
+                            <div class="stat-item">
+                                <span class="stat-num">5+</span>
+                                <span class="stat-label">Years of Experience</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">40+</span>
+                                <span class="stat-label">Production Systems</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">99.98%</span>
+                                <span class="stat-label">Uptime Reliability</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-num">1.2K+</span>
+                                <span class="stat-label">OSS GitHub Stars</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3D Tilt Hero Visual -->
+                    <div class="hero-visual-wrapper reveal-init">
+                        <div class="hero-card-3d" id="hero-tilt-card">
+                            <div class="glossy-glare"></div>
+                            <div class="hero-card-inner">
+                                <img src="assets/images/hero-portrait.jpg" alt="Lohith Vel Portrait" id="hero-image" loading="eager">
+                            </div>
+
+                            <div class="hero-card-badge">
+                                <div>
+                                    <div class="hero-badge-title" id="badge-name">Lohith Vel</div>
+                                    <div class="hero-badge-sub">Full-Stack Systems Architect</div>
+                                </div>
+                                <div style="display: flex; gap: 4px;">
+                                    <span style="color: var(--accent-primary);">✦</span>
+                                    <span style="color: var(--accent-primary);">✦</span>
+                                    <span style="color: var(--accent-primary);">✦</span>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badges -->
+                            <div class="hero-floating-tag tag-top-left">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                                </svg>
+                                <span>High-Gloss UI/UX</span>
+                            </div>
+                            <div class="hero-floating-tag tag-bottom-right">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                                </svg>
+                                <span>Cloud &amp; Distributed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Marquee Strip -->
+        <section class="marquee-section" aria-hidden="true">
+            <div class="marquee-track">
+                <div class="marquee-item">DISTRIBUTED ARCHITECTURE <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">AGENTIC AI SYSTEMS <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">HIGH-PERFORMANCE FRONTEND <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">OBSIDIAN GLASS AESTHETICS <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">SUB-100MS LATENCY <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">CLOUD INFRASTRUCTURE <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">FULL-STACK MASTERY <span class="marquee-separator">✦</span></div>
+                <!-- Duplicate for infinite seamless loop -->
+                <div class="marquee-item">DISTRIBUTED ARCHITECTURE <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">AGENTIC AI SYSTEMS <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">HIGH-PERFORMANCE FRONTEND <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">OBSIDIAN GLASS AESTHETICS <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">SUB-100MS LATENCY <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">CLOUD INFRASTRUCTURE <span class="marquee-separator">✦</span></div>
+                <div class="marquee-item">FULL-STACK MASTERY <span class="marquee-separator">✦</span></div>
+            </div>
+        </section>
+
+        <!-- About & Philosophy Section -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-badge">01 / Biography &amp; Vision</span>
+                    <h2 class="section-title">The Artisan Behind the Architecture</h2>
+                    <p class="section-subtitle">Bridging mathematics, distributed systems, and refined kinetic design to create lasting digital impact.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card reveal-init">
+                        <h3>Design Philosophy &amp; Mission</h3>
+                        <p id="about-p1">
+                            Software is not merely instructions compiled for silicon—it is a digital canvas of human intent. I believe high-performance applications should evoke the same sense of poise and luxury as fine watchmaking or modernist architecture.
+                        </p>
+                        <p id="about-p2">
+                            Over the last 5+ years, I have architected mission-critical web applications across FinTech, AI-driven workflows, and global commerce. My approach is rooted in uncompromising optimization: eliminating unnecessary rerenders, minimizing network hops, and styling with mathematical restraint.
+                        </p>
+
+                        <div class="about-meta-list">
+                            <div class="meta-item">
+                                <span class="meta-label">Location</span>
+                                <span class="meta-val" id="meta-location">Tamilnadu, India</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Availability</span>
+                                <span class="meta-val" style="color: var(--accent-primary);">Immediate Impact</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Core Specialization</span>
+                                <span class="meta-val">Full-Stack &amp; Applied AI</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Working Style</span>
+                                <span class="meta-val">Autonomous &amp; Pragmatic</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-card reveal-init">
+                        <h3>Operating Principles</h3>
+                        <div class="philosophy-grid" style="grid-template-columns: 1fr 1fr; gap: 16px;">
+                            <div class="philo-card">
+                                <div class="philo-icon">⚡</div>
+                                <h4>Speed is Elegance</h4>
+                                <p>Every frame counts. Latency is an assault on cognitive flow.</p>
+                            </div>
+                            <div class="philo-card">
+                                <div class="philo-icon">🛡️</div>
+                                <h4>Resilience First</h4>
+                                <p>Self-healing architectures designed to survive turbulent scale.</p>
+                            </div>
+                            <div class="philo-card">
+                                <div class="philo-icon">✨</div>
+                                <h4>Sensory Delight</h4>
+                                <p>Glassmorphic depth and tactile micro-physics that feel organic.</p>
+                            </div>
+                            <div class="philo-card">
+                                <div class="philo-icon">🔄</div>
+                                <h4>Continuous Learning</h4>
+                                <p>Pioneering the frontiers of agentic AI, WebGPU, and distributed graphs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise & Skills Matrix -->
+        <section class="section" id="expertise" style="background: rgba(10, 11, 16, 0.4);">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-badge">02 / Technical Depth</span>
+                    <h2 class="section-title">Architectural Mastery &amp; Tech Stack</h2>
+                    <p class="section-subtitle">A meticulously honed repertoire across all layers of modern computation and user experience.</p>
+                </div>
+
+                <!-- Live Skill Search Bar -->
+                <div style="max-width: 520px; margin: 0 auto 36px; position: relative;" class="reveal-init">
+                    <input type="text" id="skill-search-input" class="form-input" placeholder="Search technologies (e.g. React, Python, Docker, PostgreSQL, AWS)..." style="padding-left: 44px; border-radius: var(--radius-full); background: rgba(16, 18, 26, 0.85);">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted);">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                    </svg>
+                </div>
+
+                <div class="skills-matrix-grid" id="skills-container">
+                    <!-- Populated dynamically via data.js and app.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Showcase -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-badge">03 / Flagship Creations</span>
+                    <h2 class="section-title">Featured Engineering Works</h2>
+                    <p class="section-subtitle">Real-world applications engineered with extreme performance, cinematic aesthetics, and architectural scale.</p>
+                </div>
+
+                <!-- Project Filters -->
+                <div class="projects-filter-bar reveal-init">
+                    <button class="project-filter-btn active" data-filter="all">All Disciplines</button>
+                    <button class="project-filter-btn" data-filter="ai">AI &amp; Cognitive</button>
+                    <button class="project-filter-btn" data-filter="fintech">FinTech &amp; Web3</button>
+                    <button class="project-filter-btn" data-filter="design">Luxury &amp; UI</button>
+                    <button class="project-filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+                </div>
+
+                <!-- Projects Cards Grid -->
+                <div class="projects-grid" id="projects-container">
+                    <!-- Populated dynamically with 3D tilt cards from data.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Career Journey & Experience Timeline -->
+        <section class="section" id="journey" style="background: rgba(10, 11, 16, 0.4);">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-badge">04 / Evolution &amp; Impact</span>
+                    <h2 class="section-title">Career Milestones &amp; Trajectory</h2>
+                    <p class="section-subtitle">A chronological record of leadership, architectural delivery, and enterprise scale.</p>
+                </div>
+
+                <div class="timeline-container" id="timeline-container">
+                    <div class="timeline-line"></div>
+                    <!-- Timeline entries populated from data.js -->
+                </div>
+
+                <!-- Certifications Strip -->
+                <div style="margin-top: 70px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #FFFFFF; margin-bottom: 24px; text-align: center;">Recognized Accreditations &amp; Credentials</h3>
+                    <div class="certs-grid" id="certs-container">
+                        <!-- Populated from data.js -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Developer Terminal -->
+        <section class="section" id="terminal">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-badge">05 / Interactive Shell</span>
+                    <h2 class="section-title">Developer Terminal Console</h2>
+                    <p class="section-subtitle">Type commands like <code style="color: var(--accent-primary);">help</code>, <code style="color: var(--accent-primary);">projects</code>, <code style="color: var(--accent-primary);">skills</code>, <code style="color: var(--accent-primary);">bio</code>, or <code style="color: var(--accent-primary);">matrix</code>.</p>
+                </div>
+
+                <div class="terminal-wrapper reveal-init">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="term-dot red"></span>
+                            <span class="term-dot yellow"></span>
+                            <span class="term-dot green"></span>
+                        </div>
+                        <div class="terminal-title">guest@lohith-apex-system: ~ (zsh)</div>
+                        <button id="btn-clear-term" style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--text-muted); padding: 2px 8px; border-radius: 4px; border: 1px solid var(--border-glass);">clear</button>
+                    </div>
+
+                    <div class="terminal-body" id="terminal-body">
+                        <div class="term-output-line system">Initializing Lohith Vel OS v4.2 [Secure Connection Established]</div>
+                        <div class="term-output-line system">Type <span style="color: var(--accent-primary); font-weight: bold;">help</span> to inspect available interactive commands.</div>
+                        <div class="term-output-line" style="margin-top: 8px;">Welcome, visitor! You are accessing the live interactive shell of Lohith Vel.</div>
+                    </div>
+
+                    <div style="padding: 12px 22px; background: #0A0D14; border-top: 1px solid var(--border-glass);">
+                        <form id="terminal-form" class="term-input-row">
+                            <span class="term-prompt">lohith-shell:~$</span>
+                            <input type="text" id="terminal-input" class="term-input-field" placeholder="type a command (try 'help')..." autocomplete="off" spellcheck="false">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials & Endorsements -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-badge">06 / Endorsements</span>
+                    <h2 class="section-title">Voices of Collaboration</h2>
+                    <p class="section-subtitle">What CTOs, Engineering Leaders, and Founders say about my commitment to excellence.</p>
+                </div>
+
+                <div class="testimonials-grid" id="testimonials-container">
+                    <!-- Populated dynamically from data.js -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Collaboration Section -->
+        <section class="section" id="contact" style="background: rgba(10, 11, 16, 0.4);">
+            <div class="container">
+                <div class="section-header reveal-init">
+                    <span class="section-badge">07 / Connect &amp; Build</span>
+                    <h2 class="section-title">Let's Create Something Extraordinary</h2>
+                    <p class="section-subtitle">Whether you are building the next category-defining product, solving heavy distributed scale, or looking for leadership, let's talk.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <div class="contact-info-card reveal-init">
+                        <h3>Direct Channels</h3>
+                        <p>I value clarity, deliberate architecture, and swift execution. Reach out directly or dispatch a transmission via the console.</p>
+
+                        <div class="contact-channels">
+                            <div class="contact-channel-item">
+                                <div class="channel-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div class="channel-details">
+                                    <div class="channel-label">Email Address</div>
+                                    <div class="channel-val" id="contact-email">lohithvel.dev@gmail.com</div>
+                                </div>
+                                <button class="btn-copy-chip" data-copy="lohithvel.dev@gmail.com">Copy</button>
+                            </div>
+
+                            <div class="contact-channel-item">
+                                <div class="channel-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div class="channel-details">
+                                    <div class="channel-label">Primary Location</div>
+                                    <div class="channel-val">Tamilnadu, India</div>
+                                </div>
+                            </div>
+
+                            <a href="https://github.com/lohithvelsakthi-arch" target="_blank" rel="noopener noreferrer" class="contact-channel-item" style="text-decoration: none;">
+                                <div class="channel-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                    </svg>
+                                </div>
+                                <div class="channel-details">
+                                    <div class="channel-label">GitHub Workspace</div>
+                                    <div class="channel-val">lohithvelsakthi-arch</div>
+                                </div>
+                                <span style="font-size: 0.8rem; color: var(--accent-primary); font-family: var(--font-mono);">Visit ↗</span>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/lohith-vel-a97024380/" target="_blank" rel="noopener noreferrer" class="contact-channel-item" style="text-decoration: none;">
+                                <div class="channel-icon">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                        <rect x="2" y="9" width="4" height="12"></rect>
+                                        <circle cx="4" cy="4" r="2"></circle>
+                                    </svg>
+                                </div>
+                                <div class="channel-details">
+                                    <div class="channel-label">LinkedIn Profile</div>
+                                    <div class="channel-val">lohith-vel-a97024380</div>
+                                </div>
+                                <span style="font-size: 0.8rem; color: var(--accent-primary); font-family: var(--font-mono);">Connect ↗</span>
+                            </a>
+                        </div>
+
+                        <!-- Simulated Coffee Chat Scheduler -->
+                        <div style="padding: 16px; background: rgba(0,0,0,0.3); border-radius: var(--radius-md); border: 1px solid var(--border-glass);">
+                            <div style="font-weight: 700; color: #FFFFFF; font-size: 0.92rem; margin-bottom: 6px; display: flex; align-items: center; gap: 8px;">
+                                <span>☕</span> Quick 15-Min Coffee Chat
+                            </div>
+                            <div style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 12px;">Interested in an informal architectural chat or role discussion?</div>
+                            <button class="btn-secondary" id="btn-coffee-chat" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 8px 16px;">
+                                Request Calendar Slot
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-card reveal-init">
+                        <form id="contact-form">
+                            <div class="form-group">
+                                <label for="contact-name" class="form-label">Your Name / Organization</label>
+                                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Elena Rostova / Aura Labs" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-email-input" class="form-label">Email Coordinate</label>
+                                <input type="email" id="contact-email-input" class="form-input" placeholder="elena@example.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-project-type" class="form-label">Nature of Inquiry</label>
+                                <select id="contact-project-type" class="form-input" style="cursor: pointer;">
+                                    <option value="Full-Time Architecture Role">Full-Time Architecture / Senior Engineering Role</option>
+                                    <option value="Consulting / Distributed Scaling">High-Scale Consulting / Advisory</option>
+                                    <option value="Custom Bespoke Web Project">Custom Bespoke Digital Platform</option>
+                                    <option value="General Conversation">Technical Exchange / Coffee Chat</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message" class="form-label">Project Vision / Message</label>
+                                <textarea id="contact-message" class="form-textarea" placeholder="Detail your project scope, timeline, goals, or role expectations..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-primary" style="width: 100%; padding: 14px 24px; font-size: 0.95rem;">
+                                <span>Transmit Message</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <div class="logo-badge" style="width: 32px; height: 32px; font-size: 0.9rem;">LV</div>
+                    <div>
+                        <div style="font-weight: 700; color: #FFFFFF; font-size: 0.95rem;" id="footer-name">Lohith Vel</div>
+                        <div style="font-size: 0.76rem; color: var(--text-muted); font-family: var(--font-mono);">Obsidian Glass Architecture</div>
+                    </div>
+                </div>
+
+                <div class="footer-socials">
+                    <a href="https://github.com/lohithvelsakthi-arch" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="GitHub" aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/lohith-vel-a97024380/" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="LinkedIn" aria-label="LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" title="X / Twitter" aria-label="X Twitter">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <button class="back-to-top" id="btn-back-to-top" title="Return to Top" aria-label="Back to Top">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <polyline points="18 15 12 9 6 15"></polyline>
+                    </svg>
+                </button>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; <span id="year-copy">2026</span> Lohith Vel. All rights reserved. Precision engineered with pure Vanilla Web standards.</div>
+                <div style="display: flex; align-items: center; gap: 16px;">
+                    <button id="btn-open-editor" style="color: var(--text-muted); font-size: 0.78rem; display: flex; align-items: center; gap: 6px; cursor: pointer; transition: color var(--transition-fast);">
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                            <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                        </svg>
+                        <span>Edit Profile Data</span>
+                    </button>
+                    <div style="font-family: var(--font-mono); font-size: 0.75rem;">Obsidian Dark Classic • 60 FPS Polish</div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================================================
+         MODALS & OVERLAYS
+         ========================================================================== -->
+
+    <!-- Project Details Deep Dive Modal -->
+    <div class="modal-overlay" id="project-modal" aria-hidden="true" role="dialog">
+        <div class="modal-content-card">
+            <div class="modal-header">
+                <div>
+                    <span class="project-badge-pill" id="modal-project-badge" style="position: static; margin-bottom: 6px; display: inline-block;">Flagship</span>
+                    <h3 class="modal-title" id="modal-project-title">Project Title</h3>
+                </div>
+                <button class="modal-close-btn" id="modal-project-close" aria-label="Close Modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div style="border-radius: var(--radius-md); overflow: hidden; margin-bottom: 24px; aspect-ratio: 16/9; background: #000;">
+                    <img id="modal-project-image" src="" alt="Project Showcase" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+
+                <div style="font-weight: 600; font-size: 1.1rem; color: var(--accent-primary); margin-bottom: 12px;" id="modal-project-tagline">
+                    Tagline
+                </div>
+
+                <p style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 24px; font-size: 1rem;" id="modal-project-desc">
+                    Full description
+                </p>
+
+                <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: #FFFFFF; margin-bottom: 12px;">Key Engineering Highlights</h4>
+                <ul id="modal-project-features" style="list-style: none; margin-bottom: 24px;">
+                    <!-- Injected dynamically -->
+                </ul>
+
+                <h4 style="font-family: var(--font-heading); font-size: 1.1rem; color: #FFFFFF; margin-bottom: 12px;">Architecture &amp; Tech Stack</h4>
+                <div id="modal-project-tech" style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 30px;">
+                    <!-- Injected dynamically -->
+                </div>
+
+                <div style="display: flex; gap: 14px; flex-wrap: wrap; padding-top: 18px; border-top: 1px solid var(--border-glass);">
+                    <a href="#" id="modal-project-demo-btn" target="_blank" rel="noopener noreferrer" class="btn-primary" style="flex: 1;">
+                        <span>Launch Live System</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                    </a>
+                    <a href="#" id="modal-project-code-btn" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="flex: 1;">
+                        <span>Inspect Source Repository</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume / Curriculum Vitae Modal -->
+    <div class="modal-overlay" id="resume-modal" aria-hidden="true" role="dialog">
+        <div class="modal-content-card" style="max-width: 900px;">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title">Curriculum Vitae</h3>
+                    <div style="font-size: 0.78rem; color: var(--text-muted); font-family: var(--font-mono);">Official Verified Profile &bull; Lohith Vel</div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <button class="btn-secondary" id="btn-print-resume" style="padding: 6px 14px; font-size: 0.78rem;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                            <rect x="6" y="14" width="12" height="8"></rect>
+                        </svg>
+                        <span>Print / PDF</span>
+                    </button>
+                    <button class="modal-close-btn" id="modal-resume-close" aria-label="Close Resume">&times;</button>
+                </div>
+            </div>
+            <div class="modal-body" id="printable-resume-area">
+                <div class="resume-paper">
+                    <div class="resume-header">
+                        <div>
+                            <h2 id="resume-name">Lohith Vel</h2>
+                            <div style="color: var(--accent-primary); font-weight: 600; font-size: 1.05rem;" id="resume-title">Full-Stack Architect &amp; Creative Technologist</div>
+                            <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;" id="resume-contact-line">Tamilnadu, India &bull; lohithvel.dev@gmail.com &bull; +91 98765 43210</div>
+                        </div>
+                        <div style="text-align: right;">
+                            <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-primary);">5+ Years Experience</div>
+                            <div style="font-size: 0.78rem; color: var(--text-muted);">Distributed Systems &bull; AI</div>
+                        </div>
+                    </div>
+
+                    <div class="resume-section-title">Executive Summary</div>
+                    <p style="color: var(--text-secondary); margin-bottom: 16px;">
+                        Seasoned Full-Stack Architect with deep expertise in distributed microservices, low-latency client architectures, applied AI orchestration, and high-gloss web experiences. Proven history directing architecture for high-concurrency systems handling millions of daily events, mentoring multi-disciplinary engineering teams, and optimizing web vitals to near perfection.
+                    </p>
+
+                    <div class="resume-section-title">Technical Competencies</div>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 18px;">
+                        <div><strong style="color: #FFF;">Frontend:</strong> React, Next.js, TypeScript, Modern CSS/Canvas, WebGL, Redux/Zustand</div>
+                        <div><strong style="color: #FFF;">Backend:</strong> Node.js, Express, FastAPI, Python, Go, Microservices, REST &amp; GraphQL</div>
+                        <div><strong style="color: #FFF;">Cloud &amp; Infra:</strong> AWS (Lambda, ECS, S3, RDS), Kubernetes, Docker, CI/CD, Nginx</div>
+                        <div><strong style="color: #FFF;">Databases &amp; AI:</strong> PostgreSQL, Redis, MongoDB, Vector DBs, LLM Fine-Tuning/RAG</div>
+                    </div>
+
+                    <div class="resume-section-title">Professional Experience</div>
+                    <div id="resume-experience-list">
+                        <!-- Populated dynamically from data.js -->
+                    </div>
+
+                    <div class="resume-section-title">Education &amp; Credentials</div>
+                    <div style="margin-bottom: 8px;">
+                        <strong style="color: #FFF;">Bachelor of Technology in Computer Science &amp; Engineering</strong> &mdash; Apex Institute of Technology (First Class Distinction)
+                    </div>
+                    <div style="color: var(--text-muted); font-size: 0.85rem;">
+                        AWS Certified Solutions Architect &bull; Google Cloud Professional Architect &bull; CKA (Kubernetes)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Live Profile Customizer Drawer / Modal -->
+    <div class="modal-overlay" id="editor-modal" aria-hidden="true" role="dialog">
+        <div class="modal-content-card" style="max-width: 620px;">
+            <div class="modal-header">
+                <div>
+                    <h3 class="modal-title">Personalize Portfolio Profile</h3>
+                    <div style="font-size: 0.75rem; color: var(--text-muted); font-family: var(--font-mono);">Instantly update your bio, contact info, and role details</div>
+                </div>
+                <button class="modal-close-btn" id="modal-editor-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="editor-form">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" id="edit-name" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Professional Tagline / Role</label>
+                        <input type="text" id="edit-tagline" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Contact Email</label>
+                        <input type="email" id="edit-email" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Location</label>
+                        <input type="text" id="edit-location" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Status Badge</label>
+                        <input type="text" id="edit-status" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Bio Summary</label>
+                        <textarea id="edit-bio" class="form-textarea" rows="3" required></textarea>
+                    </div>
+                    <div style="display: flex; gap: 12px;">
+                        <button type="submit" class="btn-primary" style="flex: 1;">Save &amp; Apply Changes</button>
+                        <button type="button" id="btn-reset-data" class="btn-secondary" style="flex: 1;">Reset to Defaults</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Toast Notification -->
+    <div class="toast-notice" id="toast">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-primary)" stroke-width="2">
+            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+        </svg>
+        <span id="toast-message">Action successful!</span>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
